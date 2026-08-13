@@ -1,0 +1,46 @@
+.dm-asset.block {
+  margin: 24px 0;
+}
+
+.dm-asset .dm-asset-figure {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+}
+
+.dm-asset .dm-asset-figure img,
+.dm-asset .dm-asset-figure picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.dm-asset .dm-asset-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.dm-asset .dm-asset-url {
+  color: var(--link-color, #1473e6);
+  word-break: break-all;
+}
+
+.dm-asset .dm-asset-copy {
+  padding: 4px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 16px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dm-asset .dm-asset-copy:hover {
+  background: #f3f5f8;
+}

@@ -1,0 +1,125 @@
+:root {
+  --dm-fg: #1f2329;
+  --dm-muted: #6b7280;
+  --dm-border: #e2e5e9;
+  --dm-accent: #1473e6;
+  --dm-accent-hover: #0d66d0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'adobe-clean', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+  color: var(--dm-fg);
+  background: #fff;
+}
+
+.dm-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 12px;
+  padding: 16px;
+}
+
+.dm-header { flex: 0 0 auto; }
+.dm-title { margin: 0; font-size: 18px; font-weight: 700; }
+.dm-sub { margin: 4px 0 0; font-size: 13px; color: var(--dm-muted); }
+
+.dm-banner {
+  padding: 14px 16px;
+  border: 1px solid var(--dm-border);
+  border-radius: 8px;
+  background: #f7f9fc;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dm-banner code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: #eef1f5;
+  font-size: 12px;
+}
+
+.dm-banner-error { border-color: #f3b9b9; background: #fdf1f1; }
+
+.dm-selector {
+  flex: 1 1 auto;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--dm-border);
+  border-radius: 8px;
+}
+
+.dm-preview { flex: 0 0 auto; }
+
+.dm-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-areas:
+    'img meta'
+    'img actions';
+  gap: 4px 16px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--dm-border);
+  border-radius: 8px;
+}
+
+.dm-card-img {
+  grid-area: img;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 1px solid var(--dm-border);
+  border-radius: 6px;
+  background: #fafbfc;
+}
+
+.dm-card-meta { grid-area: meta; min-width: 0; }
+.dm-card-name { margin-bottom: 4px; font-size: 14px; font-weight: 600; }
+
+.dm-card-url {
+  display: block;
+  color: var(--dm-accent);
+  font-size: 12px;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.dm-card-url:hover { text-decoration: underline; }
+
+.dm-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  grid-area: actions;
+  margin-top: 8px;
+}
+
+.dm-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--dm-border);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--dm-fg);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dm-btn:hover { background: #f3f5f8; }
+
+.dm-btn-primary {
+  border-color: var(--dm-accent);
+  background: var(--dm-accent);
+  color: #fff;
+}
+
+.dm-btn-primary:hover { background: var(--dm-accent-hover); }
+
+.dm-status { font-size: 12px; color: var(--dm-muted); }
